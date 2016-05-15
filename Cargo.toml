@@ -1,0 +1,16 @@
+[package]
+name = "remember"
+version = "1.0.0"
+authors = ["James Anthony Bruno <j.bruno.che@gmail.com>"]
+description = "Command-line utility to remember things"
+repository = "https://github.com/EVA-01/remember"
+license = "MIT"
+readme = "README.md"
+
+[[bin]]
+name = "remember"
+path = "src/main.rs"
+
+[dependencies]
+csv = "0.14"
+clap = {version = "2", features = ["yaml"]}

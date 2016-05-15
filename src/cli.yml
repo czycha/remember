@@ -1,0 +1,61 @@
+name: remember
+version: 1.0.0
+author: James Anthony Bruno <j.bruno.che@gmail.com>
+about: Remember things from your command line
+subcommands:
+    - remove:
+        about: Removes key
+        args:
+            - key:
+                help: The key used for looking up values
+                required: true
+                index: 1
+                use_delimiter: false
+    - wipe:
+        about: This will completely remove all information
+        args:
+            - force:
+                help: No prompt (dangerous!)
+                long: force
+                short: f
+    - add:
+        about: Adds to memory bank
+        args:
+            - key:
+                help: The key used for looking up values
+                required: true
+                index: 1
+                use_delimiter: false
+            - value:
+                help: The associated value
+                required: true
+                index: 2
+                use_delimiter: false
+    - change:
+        about: Change value of key. Adds key if none exists.
+        args:
+            - key:
+                help: The key used for looking up values
+                required: true
+                index: 1
+                use_delimiter: false
+            - value:
+                help: The associated value
+                required: true
+                index: 2
+                use_delimiter: false
+    - find:
+        about: Find value for key
+        args:
+            - key:
+                help: The key for the value
+                required: true
+                index: 1
+                use_delimiter: false
+    - list:
+        about: List all saved information
+        args:
+            - keys:
+                help: Only list keys
+                long: keys
+                short: k
